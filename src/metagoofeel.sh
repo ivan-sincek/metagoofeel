@@ -81,7 +81,7 @@ function validate () {
 			fi
 		elif [[ $1 == "-f" && -z ${args[file]} ]]; then
 			args[file]=$2
-			if [[ ! -e ${args[file]} ]]; then
+			if [[ ! -f ${args[file]} ]]; then
 				error "File does not exists"
 			elif [[ ! -r ${args[file]} ]]; then
 				error "File does not have read permission"
